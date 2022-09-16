@@ -18,6 +18,7 @@ public class loops {
 		do {
 			System.out.println(j);
 			j++;
+			
 		}
 		while(j<10);
 		System.err.println("Döngü bitti");

@@ -7,6 +7,7 @@ public class datatypes {
 		int sayi2=123;
 		char karakter= 'B';
 		
+		
 		boolean dogruMu=false;
 		
 

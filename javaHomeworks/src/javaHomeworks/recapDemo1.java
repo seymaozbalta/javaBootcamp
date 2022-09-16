@@ -22,6 +22,7 @@ public class recapDemo1 {
 			enBuyuk=sayi3;
 		}
 		
+		
 		System.out.println(enBuyuk);
 
 	}

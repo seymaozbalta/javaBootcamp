@@ -24,6 +24,7 @@ public class switchDemo {
 		default:
 				System.out.println("Geçersiz harf");
 		}
+		
 
 	}
 
