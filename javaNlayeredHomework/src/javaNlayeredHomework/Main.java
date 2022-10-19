@@ -20,22 +20,23 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 		//ürün eklendi
+		Logger[] loggers= {new DatabaseLogger(),new FileLogger()};
 		Course course1=new Course("Java","Engin Demiroğ",10,50);
 		//iş kuralına uyuyor mu diye kontrol
-		CourseManager courseManager=new CourseManager(new JdbcCourseDao(),new DatabaseLogger());
+		CourseManager courseManager=new CourseManager(new JdbcCourseDao(),loggers);
 		courseManager.add(course1);
 		
-		Logger[] loggers= {new DatabaseLogger(),new FileLogger()};
+		
 		//kategori ekleme
 		Categories category1= new Categories("Programlama");
 		
-		CategoryManager categoryManager=new CategoryManager(new HibernateCategoryDao());
+		CategoryManager categoryManager=new CategoryManager(new HibernateCategoryDao(),loggers);
 		categoryManager.add(category1);
 		
 		//eğitmen ekleme
 		Instructor instructor1=new Instructor(1,"Engin","Demiroğ");
 		
-		InstructorManager instructorManager=new InstructorManager(new JdbcInstructorDao());
+		InstructorManager instructorManager=new InstructorManager(new JdbcInstructorDao(),loggers);
 		instructorManager.add(instructor1);
 
 	}
