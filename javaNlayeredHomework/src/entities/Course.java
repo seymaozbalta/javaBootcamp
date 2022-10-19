@@ -11,7 +11,7 @@ public class Course {
 	}
 
 	public Course(String courseName, String instructor, double progress,double price) {
-		super();
+		
 		this.courseName = courseName;
 		this.instructor = instructor;
 		this.progress = progress;
